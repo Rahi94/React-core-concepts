@@ -5,8 +5,16 @@ import './App.css'
 import Todo from './Todo'
 import Actor from './Actor'
 import Singer from './Singer'
+import Bookstore from './Bookstore'
 
 function App() {
+
+  const books =[
+    {id:1, name: "physics", price: 120},
+    {id:1, name: "biology", price: 120},
+    {id:1, name: "math", price: 120},
+    {id:1, name: "chemistry", price: 120},
+  ]
 
   const actors = ['shah rukh khan', 'aamir khan','salman khan']
   const singers =[
@@ -22,6 +30,7 @@ function App() {
     <>
 
       <h1>React core concepts</h1>
+      <Bookstore books={books}></Bookstore>
       {
         singers.map(singer => <Singer singer={singer}></Singer>)
       }
